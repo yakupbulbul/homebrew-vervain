@@ -7,7 +7,7 @@ cask "vervain" do
   desc "Free, open-source macOS cleaner that respects your files and privacy"
   homepage "https://vervain.app"
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "Vervain.app"
 
