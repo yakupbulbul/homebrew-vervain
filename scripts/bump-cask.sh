@@ -27,7 +27,7 @@ if [ "$newest" != "$latest" ]; then
 fi
 
 url="https://github.com/${REPO}/releases/download/${tag}/Vervain-${latest}-homebrew.dmg"
-dmg="$(mktemp -t vervain-dmg)"
+dmg="$(mktemp "${TMPDIR:-/tmp}/vervain-dmg.XXXXXX")"
 trap 'rm -f "$dmg"' EXIT
 curl -fsSL -o "$dmg" "$url" || { echo "No Homebrew DMG at ${url}"; exit 1; }
 sha="$(shasum -a 256 "$dmg" | awk '{print $1}')"
