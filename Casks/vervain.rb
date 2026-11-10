@@ -12,7 +12,12 @@ cask "vervain" do
   app "Vervain.app"
 
   zap trash: [
+    "~/Library/Application Support/Vervain",
     "~/Library/Caches/app.vervain",
+    "~/Library/Caches/com.yakupbulbul.Vervain",
+    "~/Library/HTTPStorages/app.vervain",
+    "~/Library/HTTPStorages/com.yakupbulbul.Vervain",
     "~/Library/Preferences/app.vervain.plist",
+    "~/Library/Preferences/com.yakupbulbul.Vervain.plist",
   ]
 end
